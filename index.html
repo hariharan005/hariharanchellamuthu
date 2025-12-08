@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hariharan • Portfolio</title>
+  <meta name="description" content="Hariharan Chellamuthu — Full Stack Dev, Cybersecurity, IoT, Creator" />
+  <link rel="stylesheet" href="style.css">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav glass" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">HAMISTAKEMASTERY</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#hafarm" class="nav-link">HA Farm</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" aria-label="Toggle theme" class="icon-btn" title="Toggle dark / light">
+          ☼
+        </button>
+        <button id="menuBtn" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="parallax-layer layer-1"></div>
+      <div class="parallax-layer layer-2"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="headline">Hi — I'm <span class="accent">Hariharan</span></h1>
+          <p class="lead">
+            <span id="typewriter" aria-live="polite"></span>
+            <span class="cursor">|</span>
+          </p>
+
+          <p class="sub">I build web apps, secure systems, and IoT dashboards — and I teach what I learn.</p>
+
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Hire Me</a>
+            <a class="btn btn-outline" href="#" id="downloadCv">Download CV</a>
+          </div>
+
+          <div class="quick-links">
+            <a href="#projects" class="small-link">View projects →</a>
+            <a href="#hafarm" class="small-link">HA Farm project →</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="card-profile glass-card">
+            <!-- Replace with your photo -->
+            <div class="avatar" aria-hidden="true">
+              <!-- gradient placeholder avatar -->
+              <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="g" x1="0" x2="1">
+                    <stop offset="0" stop-color="#00eaff"/>
+                    <stop offset="1" stop-color="#7b61ff"/>
+                  </linearGradient>
+                </defs>
+                <rect rx="20" width="120" height="120" fill="url(#g)"/>
+                <circle cx="60" cy="42" r="20" fill="#0b0f13"/>
+                <rect x="22" y="72" width="76" height="20" rx="8" fill="#0b0f13"/>
+              </svg>
+            </div>
+
+            <div class="profile-meta">
+              <h3>Hariharan Chellamuthu</h3>
+              <p class="muted">Full Stack • Cybersecurity • IoT</p>
+              <div class="meta-row">
+                <div><strong>8+</strong><span>years</span></div>
+                <div><strong>10+</strong><span>projects</span></div>
+                <div><strong>3k+</strong><span>YouTube views</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div class="panel glass-card animate">
+          <h2 class="section-title">About Me</h2>
+          <p>
+            I'm a problem-solver who loves building. From npm libraries to IoT dashboards and AV support systems,
+            I make practical tools and teach along the way. I founded HAMISTAKEMASTERY to share, teach, and build.
+          </p>
+
+          <ul class="about-list">
+            <li>Founder — HAMISTAKEMASTERY</li>
+            <li>Built AV support portal, Toastbar (npm), IoT dashboard</li>
+            <li>Experience with Vue, Node, Python, Arduino, security tooling</li>
+          </ul>
+        </div>
+
+        <div class="panel glass-card animate">
+          <h3 class="section-title small">Quick Facts</h3>
+          <div class="facts">
+            <div><strong>Location</strong><span>India</span></div>
+            <div><strong>Email</strong><span>replace@yourmail.com</span></div>
+            <div><strong>Availability</strong><span>Open for work</span></div>
+            <div><strong>Resume</strong><span><a href="#" id="cvLink">Download</a></span></div>
+          </div>
+
+          <div class="skill-chips">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vue</span><span>Node</span><span>IoT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid animate">
+          <div class="skill">HTML & CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Vue.js</div>
+          <div class="skill">Node.js</div>
+          <div class="skill">MongoDB</div>
+          <div class="skill">Cybersecurity</div>
+          <div class="skill">IoT & Arduino</div>
+          <div class="skill">Git & DevOps</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+          <!-- Project Card 1 -->
+          <article class="project glass-card tilt animate" data-tags="vue,node,auth">
+            <div class="project-media" style="background: linear-gradient(135deg,#00eaff33,#7b61ff33)">
+              <div class="project-label">Web App</div>
+            </div>
+            <div class="project-body">
+              <h3>AV Support Requirements Portal</h3>
+              <p>Role-based portal where students submit AV requests and Colonel/AV support manage approvals.</p>
+              <div class="project-meta">
+                <span class="pill">Vue</span>
+                <span class="pill">Node</span>
+                <a class="link" href="#" aria-label="View demo">Live</a>
+                <a class="link" href="#" aria-label="View code">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project glass-card tilt animate" data-tags="npm,js">
+            <div class="project-media" style="background: linear-gradient(135deg,#ff9a9e33,#fad0c433)">
+              <div class="project-label">Library</div>
+            </div>
+            <div class="project-body">
+              <h3>Toastbar — NPM</h3>
+              <p>Customizable toast library for Vue/React/HTML with emoji and multiple styles.</p>
+              <div class="project-meta">
+                <span class="pill">JS</span>
+                <span class="pill">Package</span>
+                <a class="link" href="#">NPM</a>
+                <a class="link" href="#">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project glass-card tilt animate" data-tags="iot,vue">
+            <div class="project-media" style="background: linear-gradient(135deg,#b2f4c933,#7bd38933)">
+              <div class="project-label">IoT</div>
+            </div>
+            <div class="project-body">
+              <h3>IoT Dashboard</h3>
+              <p>Vue.js dashboard to visualize sensor data (temperature, humidity) with attractive charts.</p>
+              <div class="project-meta">
+                <span class="pill">Vue</span>
+                <span class="pill">IoT</span>
+                <a class="link" href="#">Live</a>
+                <a class="link" href="#">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 4 -->
+          <article class="project glass-card tilt animate" data-tags="python,security">
+            <div class="project-media" style="background: linear-gradient(135deg,#ffd6a533,#ffb36a33)">
+              <div class="project-label">Security</div>
+            </div>
+            <div class="project-body">
+              <h3>XSS Scanner</h3>
+              <p>Python tool that scans URLs for XSS vectors and color-codes results for quick triage.</p>
+              <div class="project-meta">
+                <span class="pill">Python</span>
+                <span class="pill">Security</span>
+                <a class="link" href="#">Repo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HA FARM -->
+    <section id="hafarm" class="section">
+      <div class="container grid-2">
+        <div class="panel glass-card animate">
+          <h2 class="section-title">HA Farm Project</h2>
+          <p>
+            HA Farm is a campus-integrated organic farming initiative — mulching, natural manure, 
+            smart irrigation and future IoT monitoring for water & milk supply planning for ~2000 people.
+          </p>
+          <ul>
+            <li>Organic crop rotation & mulching</li>
+            <li>Smart irrigation (IoT sensor plans)</li>
+            <li>Campus food integration & sustainability</li>
+          </ul>
+        </div>
+
+        <div class="panel glass-card animate">
+          <h3 class="small">HA Farm Dashboard (Preview)</h3>
+          <div class="hafarm-preview">
+            <!-- charts / placeholder -->
+            <div class="tile">Soil Moisture — 34%</div>
+            <div class="tile">Temp — 28°C</div>
+            <div class="tile">Next Irrigation — 2 days</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title">Testimonials</h2>
+
+        <div class="testimonials-wrap animate">
+          <div id="testimonialSlider" class="slider">
+            <div class="slide">
+              <blockquote>
+                "Completed an urgent Excel automation task — Hariharan delivered quickly and cleanly."
+              </blockquote>
+              <cite>— Manager</cite>
+            </div>
+
+            <div class="slide">
+              <blockquote>
+                "Great mentor — explained IoT concepts clearly and helped build a working dashboard."
+              </blockquote>
+              <cite>— Student</cite>
+            </div>
+
+            <div class="slide">
+              <blockquote>
+                "Very responsive on GitHub issues — great package and docs."
+              </blockquote>
+              <cite>— OSS Contributor</cite>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button id="prevSlide" aria-label="Previous">‹</button>
+            <button id="nextSlide" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB CONTRIBUTIONS -->
+    <section id="github" class="section">
+      <div class="container">
+        <h2 class="section-title">GitHub Contributions</h2>
+        <p class="muted">Replace <code>REPLACE_WITH_GITHUB_USERNAME</code> in the img URL in the HTML if you want your own chart to appear.</p>
+
+        <div class="glass-card gh-card animate">
+          <!-- Uses ghchart.rshah.org image service -->
+          <img alt="GitHub contributions" src="https://ghchart.rshah.org/REPLACE_WITH_GITHUB_USERNAME" style="max-width:100%;height:auto;border-radius:8px;">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container grid-2">
+        <div class="panel glass-card animate">
+          <h2 class="section-title">Contact</h2>
+          <p>Interested in working together or want to learn from my projects? Send a message.</p>
+
+          <form id="contactForm" class="contact-form" autocomplete="off">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+            <textarea id="message" name="message" placeholder="Tell me about your project" rows="6" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <p class="muted small">No backend yet — this form will show a demo success message.</p>
+        </div>
+
+        <div class="panel glass-card animate">
+          <h3 class="section-title small">Get in touch</h3>
+          <div class="contact-list">
+            <div><strong>Email</strong><span>replace@yourmail.com</span></div>
+            <div><strong>Phone</strong><span><a href="tel:+91REPLACE">+91 REPLACE</a></span></div>
+            <div><strong>Location</strong><span>India</span></div>
+            <div><strong>LinkedIn</strong><span><a href="#" target="_blank">Your LinkedIn</a></span></div>
+          </div>
+
+          <div class="socials">
+            <a href="#" title="GitHub">GitHub</a>
+            <a href="#" title="YouTube">YouTube</a>
+            <a href="#" title="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Hariharan • Built with ❤️ • HTML · CSS · JS</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- FLOATING WHATSAPP -->
+  <a id="whatsApp" class="whatsapp" href="https://wa.me/REPLACE_WITH_PHONE" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="white" d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 .01 5.36.01 12a11.7 11.7 0 001.62 5.85L0 24l6.39-1.64A11.95 11.95 0 0012 24c6.63 0 12-5.36 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 21.6c-.99 0-1.96-.2-2.86-.58l-.2-.1-3.8.98.99-3.7-.1-.2A9.6 9.6 0 012.4 12 9.6 9.6 0 0112 2.4 9.6 9.6 0 0121.6 12 9.6 9.6 0 0112 21.6z"></path></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
