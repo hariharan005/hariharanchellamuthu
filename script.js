@@ -125,11 +125,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Download CV placeholder action
-  $('#downloadCv') && $('#downloadCv').addEventListener('click', (e) => {
+  $('#downloadCv').on('click', function(e) {
     e.preventDefault();
-    // demo - you can replace this with an actual file link
-    alert('Replace the # in this link with your CV file path (PDF) in the project.');
-  });
+
+    // Replace with your actual PDF file
+    const pdfUrl = "assets/Resume.pdf";
+
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = "assets/Resume.pdf";
+    link.click();
+});
+
 
   // Close mobile nav when a link clicked
   $$('.nav-link').forEach(a => a.addEventListener('click', () => {
