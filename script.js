@@ -148,3 +148,75 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Tab') document.body.classList.add('show-focus');
   });
 });
+
+
+
+// This is for project content 
+const projectData = {
+  iot: {
+    title: "IoT Projects",
+    projects: [
+      "Room Temperature IoT Dashboard (Arduino + Vue)",
+      "Smart Farm Automation",
+      "IoT Security Monitoring System",
+      "Sensor Data Logger App"
+    ]
+  },
+  web: {
+    title: "Web Development",
+    projects: [
+      "Personal Portfolio Website",
+      "Attendance Management (Vue + Express + MongoDB)",
+      "Toastbar NPM Library",
+      "AV Support Requirement Portal"
+    ]
+  },
+  cyber: {
+    title: "Cyber Security Projects",
+    projects: [
+      "XSS Auto-Scanner Python Tool",
+      "Bug Hunting Reports",
+      "Web Pentest Toolkit",
+      "Google Sheets Subdomain Scanner"
+    ]
+  },
+  uiux: {
+    title: "UI / UX Designs",
+    projects: [
+      "Mobile App UI – Finance Tracker",
+      "Modern Dashboard UI",
+      "E-Learning Platform UX",
+      "Dark Mode Admin Panel"
+    ]
+  },
+  others: {
+    title: "Other Projects",
+    projects: [
+      "HaFarm Organic Farming Project",
+      "YouTube Kids Education Content",
+      "Digital Marketing Channel Setup"
+    ]
+  }
+};
+
+// Logic
+document.querySelectorAll(".sector").forEach(sec => {
+  sec.addEventListener("click", () => {
+    const cat = sec.getAttribute("data-category");
+    const data = projectData[cat];
+
+    document.getElementById("categoryTitle").textContent = data.title;
+
+    const list = document.getElementById("projectItems");
+    list.innerHTML = "";
+
+    data.projects.forEach(p => {
+      const li = document.createElement("li");
+      li.textContent = p;
+      list.appendChild(li);
+    });
+
+    document.getElementById("projectDetails").classList.remove("hidden");
+    document.getElementById("projectDetails").scrollIntoView({ behavior: "smooth" });
+  });
+});

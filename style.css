@@ -304,49 +304,90 @@ body {
 }
 
 /* projects grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-  margin-top: 24px
+.project-section {
+  text-align: center;
+  padding: 60px 20px;
 }
 
-.project {
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.circle-wrapper {
   display: flex;
-  flex-direction: column;
-  overflow: hidden
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.project-media {
-  height: 120px;
+.circle-menu {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
+}
+
+.sector {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  cursor: pointer;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 12px;
-  border-radius: 12px 12px 0 0;
-  position: relative
-}
-
-.project-label {
-  background: rgba(0, 0, 0, 0.25);
-  padding: 6px 10px;
-  border-radius: 8px;
-  color: var(--text);
-  font-weight: 700
-}
-
-.project-body {
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px
-}
-
-.project-meta {
-  display: flex;
-  gap: 10px;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap
+  font-weight: 600;
+  transition: 0.3s ease;
+  color: #001;
+}
+
+.sector:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Position sectors around circle */
+.sector[data-category="iot"] {
+  top: -20px;
+  left: 35%;
+}
+.sector[data-category="web"] {
+  top: 75px;
+  right: -20px;
+}
+.sector[data-category="cyber"] {
+  bottom: -20px;
+  left: 35%;
+}
+.sector[data-category="uiux"] {
+  top: 75px;
+  left: -20px;
+}
+.sector[data-category="others"] {
+  top: 80px;
+  left: 87px;
+}
+
+/* Project list container */
+.project-list {
+  background: #f6f8ff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.hidden {
+  display: none;
 }
 
 .pill {
