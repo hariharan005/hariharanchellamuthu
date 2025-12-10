@@ -5,7 +5,7 @@
   --bg: #071016;
   --card: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.06);
-  --accent: #00eaff;
+  --accent: #4da3ff;
   --accent-2: #7b61ff;
   --muted: #9aa6b2;
   --text: #e7eef6;
@@ -381,9 +381,11 @@ body {
   border-radius: 12px;
   max-width: 500px;
   margin: 0 auto;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: left;
+  box-shadow: var(--shadow);
   transition: 0.3s ease;
+  text-align: left;
+  color: #001;
+  
 }
 
 .hidden {
