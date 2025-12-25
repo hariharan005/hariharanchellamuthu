@@ -220,3 +220,34 @@ document.querySelectorAll(".sector").forEach(sec => {
     document.getElementById("projectDetails").scrollIntoView({ behavior: "smooth" });
   });
 });
+
+
+// Weather widget
+const NODEMCU_URL = "http://192.168.1.50/data";
+
+async function loadIotData() {
+  try {
+    const res = await fetch(NODEMCU_URL);
+    const data = await res.json();
+
+    document.getElementById("iotTemp").textContent =
+      data.temperature + "°C";
+
+    document.getElementById("iotHumidity").textContent =
+      data.humidity;
+
+    document.getElementById("iotUpdated").textContent =
+      new Date().toLocaleTimeString();
+
+  } catch (e) {
+    document.getElementById("iotTemp").textContent = "--°C";
+    document.getElementById("iotHumidity").textContent = "--";
+  }
+}
+
+// Load immediately
+loadIotData();
+
+// Auto refresh every 10 seconds
+setInterval(loadIotData, 10000);
+

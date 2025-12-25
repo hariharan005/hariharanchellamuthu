@@ -302,6 +302,13 @@ body {
   text-align: center;
   font-weight: 600
 }
+.skill:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 234, 255, 0.2);
+  transition: ease-in 0.3s;
+}
 
 /* projects grid */
 .project-section {
@@ -414,6 +421,39 @@ body {
   gap: 12px;
   margin-top: 12px
 }
+
+.weather-card {
+  text-align: center;
+}
+
+.weather-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.weather-main .temp {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.weather-main .condition {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.weather-meta {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+}
+
+.updated {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
 
 .tile {
   background: rgba(255, 255, 255, 0.03);
